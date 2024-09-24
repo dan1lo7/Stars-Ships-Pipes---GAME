@@ -1,0 +1,170 @@
+@import url("https://fonts.cdnfonts.com/css/common-pixel");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Evita barras de rolagem */
+  background: rgb(1, 0, 69);
+  background: linear-gradient(
+    180deg,
+    rgba(1, 0, 69, 1) 5%,
+    rgba(209, 41, 127, 1) 53%,
+    rgba(12, 52, 122, 1) 92%,
+    rgba(7, 57, 148, 1) 100%
+  );
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/bb5814e1-d476-46f4-8fec-c6de2d3a5a19.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#leftArea,
+#rightArea {
+  height: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameContainer {
+  width: 920px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  background-image: url(../img/Bbmn_1.gif);
+  box-shadow: 0 5px 50px 50px rgba(183, 0, 255, 0.5);
+  border: 3px solid rgb(226, 110, 216);
+  box-sizing: content-box;
+}
+
+.displayNone {
+  display: none;
+}
+
+.bird {
+  display: block;
+  width: 132px;
+  height: 35px;
+  left: 230px;
+  position: relative;
+  z-index: 999;
+  background-color: transparent;
+  background-image: url(../img/starship.png);
+}
+
+.birdExplosion {
+  position: relative;
+  display: block;
+  left: 350px;
+  width: 256px;
+  height: 256px;
+  background-image: url(../img/ngvajk82v9dc1.gif);
+  background-repeat: no-repeat;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+}
+
+#gameStatus {
+  color: #000;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.pipeBottom {
+  position: absolute;
+  width: 50px;
+  background-color: rgb(225, 0, 255);
+  z-index: 0;
+  border-radius: 20px 20px 0px 0px;
+  background-image: url(../img/image_without_black_background.png);
+}
+
+.pipeTop {
+  position: absolute;
+  width: 50px;
+  background-color: rgb(255, 0, 255);
+  z-index: 0;
+  border-radius: 0px 0px 20px 20px;
+  background-image: url(../img/image_without_black_background.png);
+}
+
+#score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(217, 83, 230); /* Cor branca */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  padding: 10px 20px; /* Padding interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  border: 3px solid rgb(217, 27, 235); /* Borda vermelha */
+  font-family: "Arial", sans-serif; /* Fonte padrão mais legível */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra no texto para destaque */
+  z-index: 10; /* Ficar acima dos outros elementos */
+}
+
+#screenGameOver {
+  display: none;
+  position: absolute;
+  top: 53%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  font-family: Arial, sans-serif;
+  color: red;
+  background-color: rgb;
+  z-index: 999;
+  font-family: "Press Start 2P", cursive;
+}
+
+#initialPage {
+  width: 80%;
+  height: 30%;
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  color: rgb(175, 16, 154);
+  animation: changeColor infinite 2s;
+  cursor: pointer;
+}
+
+@keyframes changeColor {
+  0% {
+    color: red;
+  }
+
+  25% {
+    color: orange;
+  }
+
+  50% {
+    color: yellow;
+  }
+
+  75% {
+    color: green;
+  }
+
+  100% {
+    color: red;
+  }
+}
